@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Lunimedia.Models
+namespace AspNetUserManagement.Models
 {
     public class LoginModel
     {

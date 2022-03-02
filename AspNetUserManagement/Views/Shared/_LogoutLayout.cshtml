@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Lunimedia</title>
+    <title>@ViewBag.Title - AspNetUserManagement</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
@@ -12,8 +12,8 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                @Html.ActionLink("로그인", "Login", "Auth", new { @class = "navbar-brand" })
-                @Html.ActionLink("회원가입", "Register", "Auth", new { @class = "navbar-brand" })
+                @Html.ActionLink("메인", "Index", "Home", new { @class = "navbar-brand" })
+                @Html.ActionLink("로그아웃", "Logout", "Auth", new { @class = "navbar-brand" })
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Lunimedia</p>
+            <p>&copy; @DateTime.Now.Year - AspNetUserManagement</p>
         </footer>
     </div>
 

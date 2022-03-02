@@ -1,10 +1,10 @@
-﻿using Lunimedia.Models;
-using Lunimedia.Repositorys;
+﻿using AspNetUserManagement.Models;
+using AspNetUserManagement.Repositorys;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using System;
 using System.Security.Cryptography;
 
-namespace Lunimedia.Services
+namespace AspNetUserManagement.Services
 {
     public class UserService : IUserService
     {

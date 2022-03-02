@@ -3,7 +3,7 @@ using System.Web.Mvc;
 using TugberkUg.MVC.Validation;
 using CompareAttribute = System.ComponentModel.DataAnnotations.CompareAttribute;
 
-namespace Lunimedia.Models
+namespace AspNetUserManagement.Models
 {
     public class RegisterModel
     {

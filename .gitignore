@@ -362,4 +362,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-Lunimedia/Web.config
+AspNetUserManagement/Web.config

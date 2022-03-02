@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lunimedia", "Lunimedia\Lunimedia.csproj", "{DBE82FA7-D4BA-4C23-8DA5-EB899D75D291}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetUserManagement", "AspNetUserManagement\AspNetUserManagement.csproj", "{DBE82FA7-D4BA-4C23-8DA5-EB899D75D291}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,7 +1,7 @@
-﻿using Lunimedia.Models;
+﻿using AspNetUserManagement.Models;
 using System;
 
-namespace Lunimedia.Services
+namespace AspNetUserManagement.Services
 {
     public interface IUserService
     {

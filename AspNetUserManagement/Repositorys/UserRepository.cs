@@ -1,11 +1,11 @@
-﻿using Lunimedia.Models;
+﻿using AspNetUserManagement.Models;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Configuration;
 
 
-namespace Lunimedia.Repositorys
+namespace AspNetUserManagement.Repositorys
 {
     public class UserRepository
     {

@@ -1,9 +1,9 @@
-﻿using Lunimedia.Models;
-using Lunimedia.Services;
+﻿using AspNetUserManagement.Models;
+using AspNetUserManagement.Services;
 using System.Web.Mvc;
 using System.Web.Security;
 
-namespace Lunimedia.Controllers
+namespace AspNetUserManagement.Controllers
 {
     public class AuthController : Controller
     {
