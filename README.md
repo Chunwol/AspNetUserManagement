@@ -6,12 +6,6 @@ CREATE DATABASE [AspNetUserManagement]
 ```
 ### CreateTable
 ```
-USE [AspNetUserManagement]
-GO
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [user](
 	[pk] [uniqueidentifier] NOT NULL PRIMARY KEY DEFAULT NEWID(),
 	[id] [nvarchar](50) NOT NULL,
