@@ -1,6 +1,7 @@
-﻿using System.Web.Optimization;
+﻿using System.Web;
+using System.Web.Optimization;
 
-namespace WebApplication1
+namespace AspNetUserManagement
 {
     public class BundleConfig
     {

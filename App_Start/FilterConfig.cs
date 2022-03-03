@@ -1,6 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using System.Web;
+using System.Web.Mvc;
 
-namespace WebApplication1
+namespace AspNetUserManagement
 {
     public class FilterConfig
     {

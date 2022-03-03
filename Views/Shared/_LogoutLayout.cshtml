@@ -12,8 +12,8 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                @Html.ActionLink("로그인", "Login", "Auth", new { @class = "navbar-brand" })
-                @Html.ActionLink("회원가입", "Register", "Auth", new { @class = "navbar-brand" })
+                @Html.ActionLink("메인", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("로그아웃", "Logout", "Auth", new { area = "" }, new { @class = "navbar-brand" })
             </div>
         </div>
     </div>

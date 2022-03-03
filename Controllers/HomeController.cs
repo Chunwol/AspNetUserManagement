@@ -3,7 +3,7 @@ using AspNetUserManagement.Services;
 using System;
 using System.Web.Mvc;
 
-namespace WebApplication1.Controllers
+namespace AspNetUserManagement.Controllers
 {
     public class HomeController : Controller
     {

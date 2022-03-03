@@ -1,14 +1,15 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // 어셈블리의 일반 정보는 다음 특성 집합을 통해
 // 제어됩니다. 어셈블리와 관련된 정보를 수정하려면
 // 이 특성 값을 변경하십시오.
-[assembly: AssemblyTitle("WebApplication1")]
+[assembly: AssemblyTitle("AspNetUserManagement")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WebApplication1")]
+[assembly: AssemblyProduct("AspNetUserManagement")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 이 프로젝트가 COM에 노출되는 경우 다음 GUID는 typelib의 ID를 나타냅니다.
-[assembly: Guid("501472d1-875d-4b0f-87a0-1a92bc5572b3")]
+[assembly: Guid("8ce01b52-f544-417a-9575-5a5fad284be9")]
 
 // 어셈블리의 버전 정보는 다음 네 가지 값으로 구성됩니다.:
 //

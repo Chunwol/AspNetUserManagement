@@ -67,7 +67,7 @@ namespace AspNetUserManagement.Controllers
             Session.Remove("UserPK");
             FormsAuthentication.SignOut();
 
-            return RedirectToAction("Login");
+            return RedirectToAction("Login", "Auth");
         }
 
     }
