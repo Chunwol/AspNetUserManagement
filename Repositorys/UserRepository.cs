@@ -1,28 +1,34 @@
 ﻿using AspNetUserManagement.Models;
+using AspNetUserManagement.Services;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Configuration;
+using AspNetUserManagement.Config;
 
 
 namespace AspNetUserManagement.Repositorys
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
         private SqlConnection con;
 
         public UserRepository()
         {
-            con = new SqlConnection();
-            con.ConnectionString = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            con = new SqlConnection
+            {
+                ConnectionString = $"Data Source={DotEnv.DatabaseIp};Initial Catalog={DotEnv.DatabaseName};User ID={DotEnv.DatabaseId};Password={DotEnv.DatabasePassword}"
+            };
         }
 
         public void AddUser(string userID, string name, string password, byte[] passwordSalt)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "AddUser";
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = con,
+                CommandText = "AddUser",
+                CommandType = System.Data.CommandType.StoredProcedure
+            };
 
             cmd.Parameters.AddWithValue("@USER_ID", userID);
             cmd.Parameters.AddWithValue("@USER_PW", password);
@@ -39,10 +45,12 @@ namespace AspNetUserManagement.Repositorys
         {
             UserModel r = new UserModel();
 
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "GetUserByUserID";
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = con,
+                CommandText = "GetUserByUserID",
+                CommandType = System.Data.CommandType.StoredProcedure
+            };
 
             cmd.Parameters.AddWithValue("@USER_ID", userId);
 
@@ -65,10 +73,12 @@ namespace AspNetUserManagement.Repositorys
         {
             UserModel r = new UserModel();
 
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "GetUserByUserPK";
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = con,
+                CommandText = "GetUserByUserPK",
+                CommandType = System.Data.CommandType.StoredProcedure
+            };
 
             cmd.Parameters.AddWithValue("@USER_PK", userPk);
 

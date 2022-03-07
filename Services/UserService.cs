@@ -8,7 +8,7 @@ namespace AspNetUserManagement.Services
 {
     public class UserService : IUserService
     {
-        private readonly UserRepository rep = new UserRepository();
+        readonly IUserRepository _userRepository = new UserRepository();
         private byte[] CreateSalt()
         {
             RNGCryptoServiceProvider random = new RNGCryptoServiceProvider();
@@ -35,14 +35,14 @@ namespace AspNetUserManagement.Services
         {
             byte[] salt = CreateSalt();
             string hashedPassword = CreatePasswordHash(model.Password, salt);
-            rep.AddUser(model.Id, model.Username, hashedPassword, salt);
+            _userRepository.AddUser(model.Id, model.Username, hashedPassword, salt);
 
             return true;
         }
 
         public bool VerifyId(string userId)
         {
-            UserModel user = rep.GetUserByUserId(userId);
+            UserModel user = _userRepository.GetUserByUserId(userId);
             if (user.Id != null)
             {
                 return true;
@@ -55,13 +55,13 @@ namespace AspNetUserManagement.Services
 
         public UserModel GetUserByUserId(string userId)
         {
-            UserModel user = rep.GetUserByUserId(userId);
+            UserModel user = _userRepository.GetUserByUserId(userId);
             return user;
         }
 
         public UserModel GetUserByUserPk(Guid userPk)
         {
-            UserModel user = rep.GetUserByUserPk(userPk);
+            UserModel user = _userRepository.GetUserByUserPk(userPk);
             return user;
         }
 
