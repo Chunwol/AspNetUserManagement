@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -16,6 +17,11 @@ namespace AspNetUserManagement
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //https://github.com/tonerdo/dotnet-env/issues/69
+            using (Stream stream = File.OpenRead($"{System.AppContext.BaseDirectory}.env"))
+            {
+                DotNetEnv.Env.Load(stream);
+            }
         }
     }
 }
