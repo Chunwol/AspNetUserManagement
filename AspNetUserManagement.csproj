@@ -316,10 +316,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Auth\Login.cshtml" />
     <Content Include="Views\Auth\Register.cshtml" />
     <Content Include="Views\Shared\_LoginLayout.cshtml" />
     <Content Include="Views\Shared\_LogoutLayout.cshtml" />
+    <Content Include="Views\Auth\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

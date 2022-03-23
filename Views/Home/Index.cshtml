@@ -1,5 +1,9 @@
 ﻿@model AspNetUserManagement.Models.UserModel
 
+@{
+    Layout = "~/Views/Shared/_LogoutLayout.cshtml";
+}
+
 <br />
 <h3> 안녕하세요 @Html.DisplayFor(model => model.Name)님 </h3>
 <br />
