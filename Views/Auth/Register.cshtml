@@ -39,14 +39,14 @@
     <div class="mb-4">
         <div class="form-outline">
             @Html.EditorFor(model => model.Password, new { htmlAttributes = new { type = "password", @class = "form-control", @id = "registerPassword" } })
-            @Html.LabelFor(model => model.Password, htmlAttributes: new { type = "password", @class = "form-label", @for = "registerPassword" })
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "form-label", @for = "registerPassword" })
         </div>
         @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
     </div>
 
     <div class="mb-4">
         <div class="form-outline">
-            @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control", @id = "registerConfirmPassword" } })
+            @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { type = "password", @class = "form-control", @id = "registerConfirmPassword" } })
             @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "form-label", @for = "registerConfirmPassword" })
         </div>
         @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
